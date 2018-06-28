@@ -11,6 +11,11 @@ import { routerTransition } from '../router.animations';
 export class LoginComponent implements OnInit {
     constructor(public router: Router) {}
 
+    mail = 'Dias@dwexpress.kz';
+    pass = '123';
+
+    isDialog = true;
+
     ngOnInit() {}
 
     onLoggedin() {
