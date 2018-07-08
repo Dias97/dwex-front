@@ -1,0 +1,83 @@
+h1 {
+    margin-left: 20px;
+    margin-top: 20px;
+    font-weight: bold;
+
+}
+.name-party {
+    min-height: 80px;
+    border-top: 1px solid #f2f2f2;
+    border-bottom: 1px solid #f2f2f2;
+    margin-top: 40px;
+}
+
+.central {
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 25px;
+}
+.second {
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.cont-send {
+    text-align: center;
+}
+.cont-res {
+    text-align: center;
+}
+.row {
+    input {
+        max-width: 400px;
+    }
+}
+
+.sel-but {
+    width: 400px;
+    background-color: #133759;
+    color: white;
+}
+
+.inp-cre {
+    background-color: #f5f5f5;
+    width: 400px;
+    height: 36px;
+    line-height: 36px;
+    flex: 1;
+}
+.inp-cre::-webkit-input-placeholder {
+    padding-left: 20px;
+    color: black;
+}
+
+.inp-mini {
+    background-color: #f5f5f5;
+    width: 133px;
+    height: 36px;
+    line-height: 36px;
+    flex: 1;
+}
+.inp-mini::-webkit-input-placeholder {
+    padding-left: 20px;
+    color: black;
+}
+.isEntity {
+    margin-right: 200px;
+}
+.but-siz {
+    width: 200px
+}
+.spa-mar {
+    margin-left: 10px;
+}
+
+.spa-inp {
+    width: 400px;
+}
+span {
+    font-weight: bold;
+}

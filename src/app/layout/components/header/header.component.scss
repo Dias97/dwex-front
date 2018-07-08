@@ -1,19 +1,22 @@
-$topnav-background-color: #222;
+$topnav-background-color: 	#f5f5f5;
 :host {
     .navbar {
+        margin-left: 275px;
+        padding-bottom: 32px;
         background-color: $topnav-background-color;
         .navbar-brand {
-            color: #fff;
+            color: black;
         }
         .nav-item > a {
-            color: #999;
+            color: black;
             &:hover {
-                color: #fff;
+                background: #999;
+                color: black;
             }
         }
     }
     .messages {
-        width: 300px;
+        width: 100px;
         .media {
             border-bottom: 1px solid #ddd;
             padding: 5px 10px;
@@ -21,18 +24,27 @@ $topnav-background-color: #222;
                 border-bottom: none;
             }
         }
-        .media-body {
-            h5 {
-                font-size: 13px;
-                font-weight: 600;
-            }
-            .small {
-                margin: 0;
-            }
-            .last {
-                font-size: 12px;
-                margin: 0;
-            }
-        }
     }
+}
+.collapse {
+    padding-top: 25px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.form-input {
+    margin-left: 20px;
+    height: 50px;
+    width: 420px;
+}
+.form-input::-webkit-input-placeholder {
+    padding-left: 20px;
+}
+
+.languages {
+    margin-right: 50px;
+}
+
+.setting {
+    margin-right: 100px;
 }

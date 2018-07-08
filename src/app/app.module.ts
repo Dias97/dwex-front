@@ -10,6 +10,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AuthGuard } from './shared';
 import { FormsModule } from '@angular/forms';
+import {AuthenticationService} from './login/authentication.service';
+import {ToastrModule} from "ngx-toastr";
 
 // AoT requires an exported function for factories
 export const createTranslateLoader = (http: HttpClient) => {
@@ -29,6 +31,7 @@ export const createTranslateLoader = (http: HttpClient) => {
         BrowserAnimationsModule,
         FormsModule,
         HttpClientModule,
+        ToastrModule.forRoot(),
         TranslateModule.forRoot({
             loader: {
                 provide: TranslateLoader,
@@ -39,7 +42,10 @@ export const createTranslateLoader = (http: HttpClient) => {
         AppRoutingModule
     ],
     declarations: [AppComponent],
-    providers: [AuthGuard],
+    providers: [
+        AuthGuard,
+        AuthenticationService
+                ],
     bootstrap: [AppComponent]
 })
 export class AppModule {}

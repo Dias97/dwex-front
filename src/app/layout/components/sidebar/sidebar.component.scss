@@ -1,12 +1,13 @@
-$topnav-background-color: #222;
+$topnav-background-color: #133759;
 .sidebar {
     border-radius: 0;
     position: fixed;
     z-index: 1000;
-    top: 56px;
-    left: 235px;
-    width: 235px;
-    margin-left: -235px;
+    top: 0px;
+    padding-top: 25px;
+    left: 275px;
+    width: 275px;
+    margin-left: -275px;
     border: none;
     border-radius: 0;
     overflow-y: auto;
@@ -39,13 +40,7 @@ $topnav-background-color: #222;
             background: darken($topnav-background-color, 5%);
             color: #fff;
         }
-        .header-fields {
-            padding-top: 10px;
-        
-            > .list-group-item:first-child {
-                border-top: 1px solid rgba(255, 255, 255, 0.2);
-            }
-        }
+
     }
     .sidebar-dropdown {
         *:focus {
@@ -128,7 +123,6 @@ $topnav-background-color: #222;
 }
 @media screen and (max-width: 992px) {
     .sidebar {
-        top: 54px;
         left: 0px;
     }
 }
@@ -155,4 +149,63 @@ $topnav-background-color: #222;
 ::-webkit-scrollbar-thumb {
     border-radius: 3px;
     -webkit-box-shadow: inset 0 0 3px rgba(255, 255, 255, 1);
+}
+
+
+.logo {
+    margin-bottom: 25px;
+    img {
+        margin-left: 10px;
+        width: 245px;
+    }
+}
+
+h5 {
+    color: #00b3ee;
+}
+
+.user {
+    margin-bottom: 20px;
+    min-height: 120px;
+    border-top: 1px solid #67849b;
+    border-bottom: 1px solid #67849b;
+    padding: 25px 34px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    .photo {
+        margin-right: 38px;
+        border-radius: 50%;
+        width: 76px;
+        height: 76px;
+        position: relative;
+        .status {
+            position: absolute;
+            right: -20px;
+            top: 2px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #00ff60;
+            &.inactive {
+                background: red;
+            }
+        }
+        img {
+            width: calc(100% + 22px);
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .name {
+        h3 {
+            font-weight: Bold;
+            font-size: 21px;
+            color: white;
+        }
+        p {
+            font-size: 16px;
+            color: white;
+        }
+    }
 }

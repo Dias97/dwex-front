@@ -1,6 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LayoutComponent } from './layout.component';
+import {NewParselComponent} from "./parcels/new-parsel/new-parsel.component";
+import {ListParselComponent} from "./parcels/list-parsel/list-parsel.component";
+import {NewBatchComponent} from "./batch/new-batch/new-batch.component";
+import {ListBatchComponent} from "./batch/list-batch/list-batch.component";
 
 const routes: Routes = [
     {
@@ -15,7 +19,11 @@ const routes: Routes = [
             { path: 'bs-element', loadChildren: './bs-element/bs-element.module#BsElementModule' },
             { path: 'grid', loadChildren: './grid/grid.module#GridModule' },
             { path: 'components', loadChildren: './bs-component/bs-component.module#BsComponentModule' },
-            { path: 'blank-page', loadChildren: './blank-page/blank-page.module#BlankPageModule' }
+            { path: 'blank-page', loadChildren: './blank-page/blank-page.module#BlankPageModule' },
+            { path: 'new-parsel', component: NewParselComponent},
+            { path: 'list-parsel', component: ListParselComponent},
+            { path: 'new-batch', component: NewBatchComponent},
+            { path: 'list-batch', component: ListBatchComponent}
         ]
     }
 ];

@@ -1,0 +1,106 @@
+<div class="title">
+    <h1>{{title}}</h1>
+    <a class='archive' href="">
+        <img src="../../../../assets/img/archive-icon.png" alt="">
+        <span>Архив отправлений</span>
+    </a>
+</div>
+
+<div class="row sort">
+    <div class="col col-xl-2 col-lg-12">
+
+            <input class="checkbox__text" type="checkbox">
+            <span>Выбрать все</span>
+
+    </div>
+
+    <div class="col col-xl-3 col-lg-12">
+            <select name="doings">
+                <option class="re">Действия</option>
+                <option class="re" value="1">Действие 1</option>
+                <option class="re" value="2">Действие 2</option>
+                <option class="re" value="3">Действие 4</option>
+                <option class="re" value="4">Действие 4</option>
+            </select>
+    </div>
+    <div class="col col-xl-5 col-lg-12">
+        <button class="cont">Применить</button>
+    </div>
+    <div class="col col-xl-2 col-lg-12">
+        <button class="btn btn-info pull-right" (click)="openNewParcel()">Создать посылку</button>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col col-xl-12 col-lg-12">
+        <table s>
+            <thead style="background: #f5f5f5">
+            <tr>
+                <td style='min-width: 60px;'></td>
+                <td style='min-width: 77px; text-align: center'>ID</td>
+                <td style='min-width: 109px; text-align: center'>Отправитель</td>
+                <td style='min-width: 120px; text-align: center'>Получатель</td>
+                <td style='min-width: 113px; text-align: center'>
+                    <div class="flex"><span>Страна<br>получателя</span> <a href=""><img src="../../../../assets/img/sort.png" alt=""></a></div>
+                </td>
+                <td style='min-width: 113px; text-align: center'>
+                    <div class="flex"><span>Трек-номер</span> <a href=""><img src="../../../../assets/img/sort.png" alt=""></a></div>
+                </td>
+                <td style='min-width: 113px; text-align: center'>
+                    <div class="flex"><span>Дата создания</span> <a href=""><img src="../../../../assets/img/sort.png" alt=""></a></div>
+                </td>
+                <td style='min-width: 103px; text-align: center'>
+                    <div class="flex"><span>Кол-во мест</span> <a href=""><img src="../../../../assets/img/sort.png" alt=""></a></div>
+                </td>
+                <td style='min-width: 71px; text-align: center'>
+                    <div class="flex"><span>Вес</span> <a href=""><img src="../../../../assets/img/sort.png" alt=""></a></div>
+                </td>
+                <td style='min-width: 93px; text-align: center'>
+                    <div class="flex"><span>Объем</span> <a href=""><img src="../../../../assets/img/sort.png" alt=""></a></div>
+                </td>
+                <td style='min-width: 122px; text-align: center'>Статус</td>
+                <td style='min-width: 70px; text-align: center'></td>
+                <td style='min-width: 70px; text-align: center'></td>
+                <td rowspan='2' style='min-width: 70px;'>
+                    <button><i class="fa fa-plus"></i></button>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="text" name='pack-id'></td>
+                <td><input type="text" name='pack-from'></td>
+                <td><input type="text" name='pack-to'></td>
+                <td>
+                    <select name="pack-country">
+                        <option>something</option>
+                        <option></option>
+                    </select>
+                </td>
+                <td><input type="text"name='pack-track'></td>
+                <td><input type="date" name='pack-date'></td>
+                <td>
+                    <select name="pack-place">
+                        <option></option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                    </select>
+                </td>
+                <td><input type="text" name='pack-weight'></td>
+                <td><input type="text" name='pack-v'></td>
+                <td>
+                    <select name="pack-place">
+                        <option></option>
+                        <option value="1">Формируется</option>
+                        <option value="2">Отправлена</option>
+                    </select>
+                </td>
+                <td></td>
+                <td></td>
+            </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+</div>

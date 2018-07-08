@@ -1,0 +1,331 @@
+<h1>{{title}}</h1>
+
+<div *ngIf="status === 1" style="margin-left: 40px">
+    <div class="name-party">
+        <div class="row">
+            <div class="col col-xl-6 col-lg-12 central">
+                <span>Отправитель</span>
+            </div>
+            <div class="col col-xl-6 col-lg-12 central">
+                <span>Получатель</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="row" style="margin-top: 20px">
+        <div class="col col-xl-6 col-lg-12 cont-send">
+            <div class="mb-3 isEntity">
+                <input type="checkbox" [(ngModel)]="custFrom.isEntity"  name="onoffswitch" class="onoffswitch-checkbox" checked>
+                <span class="spa-mar">Юридическое лицо</span>
+            </div>
+            <div class="mb-3">
+                <input class="inp-cre" type="text" [(ngModel)]="custFrom.companyName" placeholder="Наименования компании *"/>
+            </div>
+            <div class="mb-3">
+                <input class="inp-cre" type="text" [(ngModel)]="custFrom.surname" placeholder="Фамилия *"/>
+            </div>
+            <div class="mb-3">
+                <input class="inp-cre" type="text" [(ngModel)]="custFrom.name" placeholder="Имя *"/>
+            </div>
+            <div class="mb-3">
+                <input class="inp-cre" type="text" [(ngModel)]="custFrom.telefon" placeholder="Номер телефона*"/>
+            </div>
+            <div class="mb-3">
+                <input class="inp-cre" type="text" [(ngModel)]="custFrom.email" placeholder="E-mail*"/>
+            </div>
+            <button class="btn btn-default sel-but">Выбрать контрагента</button>
+        </div>
+
+        <div class="col col-xl-6 col-lg-12 cont-res">
+            <div class="mb-3 isEntity">
+                <input type="checkbox" [(ngModel)]="custTo.isEntity"  name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+                <span class="spa-mar">Юридическое лицо</span>
+            </div>
+            <div class="mb-3">
+                <input class="inp-cre" type="text" [(ngModel)]="custTo.companyName" placeholder="Наименования компании *"/>
+            </div>
+            <div class="mb-3">
+                <input class="inp-cre" type="text" [(ngModel)]="custTo.surname" placeholder="Фамилия *"/>
+            </div>
+            <div class="mb-3">
+                <input class="inp-cre" type="text" [(ngModel)]="custTo.name" placeholder="Имя *"/>
+            </div>
+            <div class="mb-3">
+                <input class="inp-cre" type="text" [(ngModel)]="custTo.telefon" placeholder="Номер телефона*"/>
+            </div>
+            <div class="mb-3">
+                <input class="inp-cre" type="text" [(ngModel)]="custTo.email" placeholder="E-mail*"/>
+            </div>
+            <button class="btn btn-default sel-but">Выбрать получателя</button>
+        </div>
+
+    </div>
+
+    <div class="name-party">
+        <div class="row">
+            <div class="col col-xl-6 col-lg-12 central">
+                <span>Откуда</span>
+            </div>
+            <div class="col col-xl-6 col-lg-12 central">
+                <span>Куда</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="row" style="margin-top: 20px">
+        <div class="col col-xl-6 col-lg-12 cont-send">
+            <div class="mb-3">
+                <select class="inp-cre" name="" id="">
+                    <option value="">Страна</option>
+                    <option value="">Страна 1</option>
+                    <option value="">Страна 2</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <select class="inp-cre" name="" id="">
+                    <option value="">Город</option>
+                    <option value="">Город 1</option>
+                    <option value="">Город 2</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <input class="inp-cre" type="text" placeholder="Индекс"/>
+            </div>
+            <div class="mb-3">
+                <input class="inp-cre" type="text" placeholder="Улица *"/>
+            </div>
+            <div class="mb-3">
+                <div class="fl">
+                    <input class="inp-mini"  type="text" name='name' placeholder="Дом *" required>
+                    <input class="inp-mini"  type="text" name='name' placeholder="Корпус">
+                    <input class="inp-mini"  type="text" name='name' placeholder="кв/оф *" required>
+                </div>
+            </div>
+            <div class="mb-3">
+                <input class="inp-cre" type="text" placeholder="Другое"/>
+            </div>
+        </div>
+
+        <div class="col col-xl-6 col-lg-12 cont-res">
+            <div class="mb-3">
+                <select class="inp-cre" name="" id="">
+                    <option value="">Страна</option>
+                    <option value="">Страна 1</option>
+                    <option value="">Страна 2</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <select class="inp-cre" name="" id="">
+                    <option value="">Город</option>
+                    <option value="">Город 1</option>
+                    <option value="">Город 2</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <input class="inp-cre" type="text" placeholder="Индекс"/>
+            </div>
+            <div class="mb-3">
+                <input class="inp-cre" type="text" placeholder="Улица *"/>
+            </div>
+            <div class="mb-3">
+                <div class="fl">
+                    <input class="inp-mini" type="text" name='name' placeholder="Дом *" required>
+                    <input class="inp-mini" type="text" name='name' placeholder="Корпус">
+                    <input class="inp-mini" type="text" name='name' placeholder="кв/оф *" required>
+                </div>
+            </div>
+            <div class="mb-3">
+                <input class="inp-cre" type="text" placeholder="Другое"/>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div *ngIf="status === 2 || status === 3" style="margin-left: 40px">
+
+    <div class="name-party">
+        <div class="row">
+            <div class="col col-xl-4 col-lg-12 central">
+                <span>Данные отправителя</span>
+            </div>
+            <div class="col col-xl-4 col-lg-12 central">
+                <span>Данные получателя</span>
+            </div>
+            <div class="col col-xl-4 col-lg-12 central">
+                <span>Адрес доставки</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col col-xl-4 col-lg-12 second">
+            <div class="mb-3">
+                <span>{{custFrom?.surname}}  {{custFrom?.name}} {{custFrom?.middlename}}</span>
+            </div>
+            <div class="mb-3">
+                <span>{{custFrom?.telefon}}</span>
+            </div>
+        </div>
+
+        <div class="col col-xl-4 col-lg-12 second">
+            <div class="mb-3">
+                <span>{{custTo?.surname}}  {{custTo?.name}} {{custTo?.middlename}}</span>
+            </div>
+            <div class="mb-3">
+                <span>{{custTo?.telefon}}</span>
+            </div>
+        </div>
+
+        <div class="col col-xl-4 col-lg-12 second">
+            <div class="mb-3">
+                <span>{{custTo?.surname}}  {{custTo?.name}} {{custTo?.middlename}}</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="row name-party" *ngIf="status === 2">
+        <span class="central" style="margin-left: 40px">Посылка</span>
+    </div>
+
+    <div class="row" style="margin-top: 20px" *ngIf="status === 2">
+        <div class="col col-xl-4 col-lg-12 cont-send">
+            <div class="mb-3">
+                <input class="inp-cre" placeholder="Кол-во мест, шт *" type="text"/>
+            </div>
+            <div class="mb-3">
+                <input class="inp-cre" placeholder="Вес, кг *" type="text"/>
+            </div>
+            <div class="mb-3">
+                <div class="fl">
+                    <input class="inp-mini" type="number" name='name' placeholder="Высота, м" required>
+                    <input class="inp-mini" type="number" name='name' placeholder="Глубина, м">
+                    <input class="inp-mini" type="number" name='name' placeholder="Ширина, м" required>
+                </div>
+            </div>
+            <div class="mb-3 spa-inp">
+                <span>Объем, м3</span>
+                <input class="inp-mini" placeholder="23" type="number">
+            </div>
+            <div class="mb-3">
+                <input class="inp-cre" placeholder="Описание товара" type="number">
+            </div>
+        </div>
+        <div class="col col-xl-4 col-lg-12 cont-res">
+            <div class="mb-3">
+                <select class="inp-cre" name="" id="">
+                    <option value="">Город</option>
+                    <option value="">Город 1</option>
+                    <option value="">Город 2</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <input class="inp-cre" placeholder="Объявленная стоимость" type="text"/>
+            </div>
+            <div class="mb-3">
+                <input class="inp-cre" placeholder="Сумма страховки" type="text"/>
+            </div>
+            <div class="mb-3" style="margin-top: 20px">
+                <span>Стоимость доставки</span>
+            </div>
+            <div class="mb-3" style="margin-top: 30px">
+                <span>Итого к оплате</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="row name-party" *ngIf="status === 2">
+        <span class="central" style="margin-left: 40px; font-size: 20px">
+            <i class="fa fa-image"></i>
+            Добавить фото
+        </span>
+    </div>
+    <div class="photos" *ngIf="status === 2">
+        <img src="../../../../assets/img/no-photo2.png">
+        <img src="../../../../assets/img/no-photo2.png">
+        <img src="../../../../assets/img/no-photo2.png">
+    </div>
+    <input type="file" *ngIf="status === 2"/>
+
+    <div class="row name-party" *ngIf="status === 2">
+        <span class="central" style="margin-left: 40px; font-size: 20px">
+            <i class="fa fa-list-alt"></i>
+            Добавить файлы
+        </span>
+    </div>
+    <div class="photos" *ngIf="status === 2">
+        <img src="../../../../assets/img/no-photo2.png">
+        <img src="../../../../assets/img/no-photo2.png">
+        <img src="../../../../assets/img/no-photo2.png">
+    </div>
+    <input type="file" *ngIf="status === 2"/>
+
+    <div class="row name-party" *ngIf="status === 3">
+        <span class="central" style="margin-left: 40px">Отправление</span>
+    </div>
+
+    <div class="row" *ngIf="status === 3" style="margin-top: 20px">
+        <div class="col col-xl-5 col-lg-12">
+            <div class="mb-3">
+                Места<span></span>
+            </div>
+            <div class="mb-3">
+                Общий вес<span></span>
+            </div>
+            <div class="mb-3">
+                Объем<span></span>
+            </div>
+
+            <div class="mb-3">
+                <span class="second">Прикрепленные фото</span>
+            </div>
+            <div class="mb-3">
+                <img src="../../../../assets/img/no-photo2.png">
+                <img src="../../../../assets/img/no-photo2.png">
+                <img src="../../../../assets/img/no-photo2.png">
+            </div>
+
+            <div class="mb-3">
+                <span class="second">Прикрепленные файлы</span>
+            </div>
+
+            <div>
+                фывафыа
+                фывафыав
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="row" style="margin: 50px 50px">
+    <div class="col col-xl-2 col-lg-12">
+        <button class="btn btn-danger but-siz" (click)="stepBack()">НАЗАД</button>
+    </div>
+    <div class="col col-xl-2 col-lg-12">
+    </div>
+    <div class="col col-xl-2 col-lg-12">
+        <div *ngIf="status === 3" style="margin-top: 10px">
+            <input type="checkbox"/>
+            <span class="spa-mar">Печать бланка</span>
+        </div>
+    </div>
+    <div class="col col-xl-2 col-lg-12">
+        <div *ngIf="status === 3" style="margin-top: 10px">
+            <input type="checkbox"/>
+            <span class="spa-mar">Печать счета</span>
+            <i class="fa fa-question-circle-o spa-mar"></i>
+        </div>
+    </div>
+    <div class="col col-xl-2 col-lg-12">
+        <button *ngIf="status !== 3" class="btn btn-info but-siz" (click)="stepForward()">ДАЛЕЕ</button>
+        <button *ngIf="status === 3" class="btn btn-info but-siz">НА УПАКОВКУ</button>
+    </div>
+    <div class="col col-xl-2 col-lg-12">
+        <button *ngIf="status === 3" class="btn btn-danger but-siz">
+            <i class="fa fa-trash"></i>
+            УДАЛИТЬ
+        </button>
+    </div>
+</div>
